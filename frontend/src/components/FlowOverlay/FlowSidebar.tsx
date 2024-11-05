@@ -1,3 +1,4 @@
+import Logo from "@/components/global/Logo";
 import {
   Sidebar,
   SidebarContent,
@@ -8,7 +9,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import Logo from "@/components/Logo";
 
 import { FlowCategories } from "@/constants/flow-icons";
 import { FlowIcon } from "@/types/flow";
@@ -24,9 +24,7 @@ type CategoryIconsProps = {
 const Title = ({ text }: TitleProps) => {
   return (
     <SidebarGroupLabel className="flex items-center mt-4">
-      <h1 className="text-base font-medium text-slate-600">
-        {text}
-      </h1>
+      <h1 className="text-base font-medium text-slate-600">{text}</h1>
       <hr className="flex flex-1 m-4" />
     </SidebarGroupLabel>
   );
