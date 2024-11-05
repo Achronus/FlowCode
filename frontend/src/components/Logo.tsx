@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import ThemeToggle from "@/components/ThemeToggle";
+
 const Logo = () => {
   return (
     <div className="flex mx-2 my-4">
@@ -16,6 +18,7 @@ const Logo = () => {
           FlowCode
         </h1>
       </Link>
+      <ThemeToggle />
     </div>
   );
 };
