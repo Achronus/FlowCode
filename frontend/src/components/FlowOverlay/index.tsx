@@ -1,4 +1,4 @@
 import MainControls from "./MainControls";
-import Header from "./Header";
+import FlowSidebar from "./FlowSidebar";
 
-export { Header, MainControls };
+export { MainControls, FlowSidebar };

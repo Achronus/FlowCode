@@ -7,7 +7,7 @@ import {
   useEdgesState,
   addEdge,
 } from "@xyflow/react";
-import { Header, MainControls } from "./FlowOverlay";
+import { MainControls } from "./FlowOverlay";
 
 const initialNodes = [
   {
@@ -38,18 +38,15 @@ function BasicFlowchart() {
   );
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-      >
-        <Header />
-        <MainControls />
-      </ReactFlow>
-    </div>
+    <ReactFlow
+      nodes={nodes}
+      edges={edges}
+      onNodesChange={onNodesChange}
+      onEdgesChange={onEdgesChange}
+      onConnect={onConnect}
+    >
+      <MainControls />
+    </ReactFlow>
   );
 }
 
