@@ -1,5 +1,5 @@
 import FlowBoard from "@/components/FlowBoard";
-import { FlowSidebar } from "@/components/global";
+import FlowSidebar from "@/components/FlowSidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function Home() {
