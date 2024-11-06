@@ -1,12 +1,6 @@
 import { FlowCategory, FlowIcon } from "@/types/flow";
 
-import {
-  Atom,
-  Bot,
-  Package,
-  Scroll,
-  Waypoints,
-} from "lucide-react";
+import { Atom, Bot, Package, Scroll, Waypoints } from "lucide-react";
 
 export const ClassIcons: FlowIcon[] = [
   {
@@ -40,8 +34,11 @@ export const ModelIcons: FlowIcon[] = [
     borderColour: "#27AE60",
     bgColour: "#DFF5E4",
   },
+];
+
+export const CustomIcons: FlowIcon[] = [
   {
-    title: "AI",
+    title: "Custom",
     url: "#",
     icon: Bot,
     borderColour: "#E74C3C",
@@ -57,5 +54,9 @@ export const FlowCategories: FlowCategory[] = [
   {
     title: "Models",
     icons: ModelIcons,
+  },
+  {
+    title: "Custom",
+    icons: CustomIcons,
   },
 ];
