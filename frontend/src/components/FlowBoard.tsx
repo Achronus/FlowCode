@@ -1,12 +1,12 @@
 "use client";
 
-import { useCallback } from "react";
 import {
-  ReactFlow,
-  useNodesState,
-  useEdgesState,
   addEdge,
+  ReactFlow,
+  useEdgesState,
+  useNodesState,
 } from "@xyflow/react";
+import { useCallback } from "react";
 import { MainControls } from "./FlowOverlay";
 
 const initialNodes = [
@@ -21,19 +21,14 @@ const initialNodes = [
     data: { label: "2" },
   },
 ];
-const initialEdges = [
-  { id: "e1-2", source: "1", target: "2" },
-];
+const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 
-function BasicFlowchart() {
-  const [nodes, setNodes, onNodesChange] =
-    useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] =
-    useEdgesState(initialEdges);
+function FlowBoard() {
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   const onConnect = useCallback(
-    (params: any) =>
-      setEdges((eds) => addEdge(params, eds)),
+    (params: any) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
   );
 
@@ -50,4 +45,4 @@ function BasicFlowchart() {
   );
 }
 
-export default BasicFlowchart;
+export default FlowBoard;
