@@ -1,15 +1,8 @@
-import { LucideProps } from "lucide-react";
-import {
-  ForwardRefExoticComponent,
-  RefAttributes,
-} from "react";
+import { LucideIcon } from "./common";
 
 export type FlowIcon = {
   title: string;
-  url: string;
-  icon: ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-  >;
+  icon: LucideIcon;
   borderColour: string;
   bgColour: string;
 };

@@ -39,8 +39,9 @@ const CategoryIcons = ({ icons }: CategoryIconsProps) => {
             <SidebarMenuButton
               asChild
               className="flex flex-col w-full h-full p-3 transition-all"
+              draggable
             >
-              <a href={icon.url}>
+              <div className="cursor-pointer">
                 <div
                   className="flex border-2 rounded-lg p-4 justify-center items-center"
                   style={{
@@ -52,7 +53,7 @@ const CategoryIcons = ({ icons }: CategoryIconsProps) => {
                   <icon.icon />
                 </div>
                 <p>{icon.title}</p>
-              </a>
+              </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         ))}
